@@ -1,6 +1,665 @@
 # FLYERS
 
+{
+  "prompt_name": "PROMPT_MAESTRO_FINAL_FLYER_UATF_LIENZO_PPTX",
+  "version": "FINAL_V5_CONTROL_TOTAL_3_4_NUMERACION_FOOTER_COORDINADOR",
 
+  "purpose": "Crear flyers institucionales profesionales de la Universidad Autónoma Tomás Frías utilizando una IMAGEN DE LIENZO como referencia maestra de estructura visual y un PPTX ACTUAL como fuente de contenido académico y administrativo del programa. El lienzo define los campos, jerarquía, composición y estructura visual. El PPTX define los valores reales de los campos académicos y del programa. El footer institucional del lienzo constituye una excepción: sus datos deben conservarse y únicamente corroborarse contra el PPTX.",
+
+  "FORMAT": {
+    "aspect_ratio": "3:4",
+    "orientation": "vertical",
+    "mandatory": true,
+    "rule": "El flyer final debe generarse obligatoriamente en relación de aspecto 3:4 vertical.",
+    "priority": "No deformar, recortar incorrectamente ni alterar la jerarquía visual del lienzo para adaptar el formato."
+  },
+
+  "CORE_PRINCIPLE": {
+    "rule": "EL LIENZO DEFINE QUÉ CAMPOS DEBEN BUSCARSE, CÓMO SE ORGANIZAN Y CÓMO SE PRESENTAN. EL PPTX DEFINE LOS VALORES REALES DE ESOS CAMPOS. EL FOOTER DEL LIENZO SE CONSERVA COMO INFORMACIÓN INSTITUCIONAL BASE Y SOLO SE CORROBORA CONTRA EL PPTX.",
+    "absolute_rules": [
+      "No reutilizar contenido académico de otros proyectos.",
+      "No inventar información.",
+      "No completar datos faltantes con conocimientos externos.",
+      "No trasladar automáticamente información académica del lienzo al nuevo proyecto.",
+      "No utilizar el lienzo como fuente de contenido académico.",
+      "No utilizar información de otros PPTX.",
+      "No corregir silenciosamente palabras.",
+      "Las tildes faltantes en palabras completamente escritas en MAYÚSCULAS siempre deben corregirse.",
+      "Toda corrección que cambie una palabra, nombre, cifra, fecha, precio o significado debe informarse y aprobarse antes de aplicarse.",
+      "Si un campo permitido no existe en el PPTX, eliminarlo.",
+      "Nunca utilizar textos de relleno.",
+      "Nunca utilizar POR DEFINIR, PENDIENTE, NO DISPONIBLE, NO ESPECIFICADO, POR CONFIRMAR o A DEFINIR.",
+      "No generar la imagen mientras exista una aprobación pendiente o una inconsistencia crítica sin resolver."
+    ]
+  },
+
+  "WORKFLOW": {
+    "mandatory_order": [
+      "Recibir IMAGEN DE LIENZO.",
+      "Recibir PPTX ACTUAL.",
+      "Analizar el lienzo.",
+      "Identificar estructura, composición, jerarquía y campos.",
+      "Identificar los 3 escudos base.",
+      "Preguntar si se desean escudos adicionales.",
+      "Validar los escudos adicionales proporcionados por el usuario.",
+      "Analizar el PPTX actual.",
+      "Detectar automáticamente el tipo de programa.",
+      "Detectar automáticamente el nombre oficial del programa.",
+      "Detectar si el título contiene numeración romana.",
+      "Aplicar CONTROL DE NUMERACIÓN DEL PROGRAMA.",
+      "Buscar únicamente los campos autorizados.",
+      "Excluir información no autorizada.",
+      "Aplicar CONTROL DE CORRECCIONES.",
+      "Detectar inconsistencias internas.",
+      "Aplicar CONTROL DEL FOOTER.",
+      "Aplicar CONTROL DE COORDINADOR.",
+      "Realizar auditoría de duplicaciones.",
+      "Elaborar reporte previo.",
+      "Informar el total exacto de escudos.",
+      "Solicitar las aprobaciones pendientes.",
+      "Realizar validación final.",
+      "Generar únicamente cuando todas las validaciones hayan sido superadas.",
+      "Validar el resultado final."
+    ]
+  },
+
+  "REQUIRED_FILES": {
+    "mandatory": true,
+    "required": [
+      "IMAGEN_DE_LIENZO_REFERENCIA",
+      "PPTX_ACTUAL"
+    ],
+    "rule": "No iniciar el diseño hasta disponer de ambos elementos."
+  },
+
+  "CANVAS_ANALYSIS": {
+    "mandatory": true,
+    "instruction": "Analizar el lienzo exclusivamente para determinar estructura visual, jerarquía, composición, distribución espacial, campos informativos y lenguaje visual.",
+    "preserve": [
+      "Formato",
+      "Orientación",
+      "Proporciones",
+      "Márgenes",
+      "Header",
+      "Distribución de escudos",
+      "Jerarquía tipográfica",
+      "Tipo de programa",
+      "Nombre del programa",
+      "Descripción breve",
+      "Área de imagen principal",
+      "Bloques de información académica",
+      "Bloque de inicio",
+      "Bloques financieros",
+      "Bloque de información adicional cuando corresponda",
+      "Footer",
+      "Estilo institucional",
+      "Lenguaje visual",
+      "Distribución espacial"
+    ],
+    "content_protection": [
+      "Nunca copiar contenido académico del lienzo.",
+      "Nunca copiar nombres de programas del lienzo.",
+      "Nunca copiar fechas del lienzo.",
+      "Nunca copiar precios del lienzo.",
+      "Nunca copiar teléfonos del lienzo como datos del nuevo programa.",
+      "Nunca copiar coordinadores del lienzo.",
+      "El lienzo determina estructura y campos.",
+      "El PPTX determina los valores del nuevo programa.",
+      "El footer institucional del lienzo constituye una excepción y se conserva como bloque institucional."
+    ]
+  },
+
+  "LOGOS": {
+    "base_logo_count": 3,
+    "base_logos": [
+      {
+        "name": "Universidad Autónoma Tomás Frías",
+        "short_name": "UATF"
+      },
+      {
+        "name": "Dirección de Postgrado UATF",
+        "short_name": "POSTGRADO"
+      },
+      {
+        "name": "Comité Ejecutivo de la Universidad Boliviana",
+        "short_name": "CEUB"
+      }
+    ],
+    "rules": [
+      "Utilizar exclusivamente estos 3 escudos como escudos base.",
+      "No buscar escudos en Internet.",
+      "No inventar escudos.",
+      "No sustituir escudos.",
+      "No reutilizar escudos de proyectos anteriores.",
+      "No incorporar automáticamente escudos adicionales.",
+      "No agregar un cuarto escudo salvo autorización expresa del usuario.",
+      "Los escudos adicionales deben ser proporcionados directamente por el usuario."
+    ],
+    "additional_logos": {
+      "mandatory_question": "¿Deseas agregar otros escudos o logotipos además de los 3 escudos base?",
+      "if_no": {
+        "additional_logo_count": 0,
+        "behavior": "Utilizar exclusivamente los 3 escudos base."
+      },
+      "if_yes": {
+        "behavior": "Utilizar únicamente los archivos proporcionados directamente por el usuario.",
+        "rules": [
+          "No buscarlos en Internet.",
+          "No inventarlos.",
+          "No asumir cuáles son.",
+          "No reutilizar archivos de proyectos anteriores."
+        ]
+      }
+    },
+    "count_confirmation": {
+      "formula": "TOTAL_ESCUDOS = 3 ESCUDOS BASE + ESCUDOS ADICIONALES APROBADOS",
+      "mandatory_message": "ANTES DE GENERAR: incorporaré un total de [N] ESCUDOS: [lista exacta].",
+      "default_message": "ANTES DE GENERAR: incorporaré un total de 3 ESCUDOS: UATF, Dirección de Postgrado UATF y CEUB.",
+      "rules": [
+        "No generar antes de informar el total.",
+        "No cambiar el número después de la confirmación.",
+        "No agregar escudos no anunciados."
+      ]
+    }
+  },
+
+  "PROGRAM_TYPE_DETECTION": {
+    "mandatory": true,
+    "purpose": "Detectar automáticamente el tipo de programa a partir del nombre oficial encontrado en el PPTX.",
+    "allowed_program_types": [
+      "DOCTORADO",
+      "MAESTRÍA",
+      "DIPLOMADO",
+      "ESPECIALIDAD",
+      "CURSO",
+      "CURSO CORTO",
+      "PROGRAMA DE FORMACIÓN",
+      "PROGRAMA DE CAPACITACIÓN",
+      "TALLER",
+      "SEMINARIO",
+      "OTRO"
+    ],
+    "rules": [
+      "No pedir al usuario que indique manualmente el tipo si el PPTX lo permite identificar.",
+      "No inventar el tipo de programa.",
+      "Utilizar la denominación oficial encontrada en el PPTX.",
+      "Doctorado en... → DOCTORADO EN.",
+      "Maestría en... → MAESTRÍA EN.",
+      "Diplomado en... → DIPLOMADO EN.",
+      "Especialidad en... → ESPECIALIDAD EN.",
+      "Curso Corto → CURSO CORTO."
+    ]
+  },
+
+  "PROGRAM_NUMBERING_CONTROL": {
+    "mandatory": true,
+    "purpose": "Controlar la numeración romana de ediciones consecutivas de los programas.",
+    "rules": [
+      "La numeración romana puede ser proporcionada por el usuario como parte del nombre del programa.",
+      "Si el PPTX contiene una numeración romana explícita, conservarla exactamente.",
+      "Si el usuario proporciona una numeración como II, III, IV, XVI, etc., utilizar exactamente esa numeración.",
+      "Si el nombre del programa en el PPTX NO contiene ninguna numeración romana, NO asumir automáticamente que el dato fuente contiene esa numeración.",
+      "En ausencia de numeración en el PPTX, el sistema debe PROPONER 'I' como numeración predeterminada.",
+      "Antes de incorporar 'I' al título debe preguntar al usuario y solicitar autorización explícita.",
+      "No generar la imagen hasta recibir autorización cuando la incorporación de 'I' sea necesaria.",
+      "La incorporación de 'I' es una decisión de presentación autorizada por el usuario y no una corrección del contenido del PPTX.",
+      "No modificar el nombre académico restante del programa.",
+      "No inventar II, III, IV, XVI u otra numeración.",
+      "Si el usuario indica una numeración específica, esa numeración tiene prioridad sobre cualquier propuesta automática."
+    ],
+    "required_question_when_missing": "El PPTX no contiene numeración romana en el nombre del programa. ¿Autorizas incorporar 'I' al inicio del título?",
+    "example": {
+      "pptx": "DIPLOMADO EN GESTIÓN Y ADMINISTRACIÓN PÚBLICA CON ENFOQUE NORMATIVO",
+      "proposed_title": "I DIPLOMADO EN GESTIÓN Y ADMINISTRACIÓN PÚBLICA CON ENFOQUE NORMATIVO",
+      "status": "REQUIERE AUTORIZACIÓN DEL USUARIO"
+    }
+  },
+
+  "TITLE_STRUCTURE": {
+    "mandatory": true,
+    "instruction": "Construir automáticamente la jerarquía visual del título a partir del nombre oficial del PPTX y de la numeración autorizada.",
+    "rules": [
+      "No escribir instrucciones internas en el flyer.",
+      "No mostrar 'VERSIÓN DOCTORADO' ni expresiones similares.",
+      "No modificar el nombre oficial salvo correcciones autorizadas.",
+      "No eliminar palabras importantes.",
+      "La distribución de líneas debe priorizar legibilidad y composición.",
+      "Si se autorizó una numeración romana, incorporarla al encabezado.",
+      "La numeración autorizada forma parte de la presentación del título."
+    ]
+  },
+
+  "ALLOWED_CONTENT_FIELDS": {
+    "mandatory": true,
+    "rule": "Solo buscar en el PPTX los campos que correspondan a los bloques visuales definidos por el lienzo.",
+    "fields": {
+      "program_identification": [
+        "Tipo de programa",
+        "Nombre oficial del programa",
+        "Numeración romana autorizada"
+      ],
+      "main_description": [
+        "Descripción o frase descriptiva principal del programa"
+      ],
+      "academic_information": [
+        "Modalidad",
+        "Duración",
+        "Titulación o certificación",
+        "Carga horaria",
+        "Horas académicas",
+        "Horas reloj",
+        "Créditos",
+        "Número de plazas cuando corresponda",
+        "Horarios"
+      ],
+      "start_information": [
+        "Fecha de inicio",
+        "Inicio de clases",
+        "Inicio del programa",
+        "Inicio de estudios"
+      ],
+      "financial_information": [
+        "Inversión",
+        "Costo total",
+        "Costo de colegiatura",
+        "Monto de inscripción",
+        "Cuotas",
+        "Pagos mensuales",
+        "Modalidad de pago",
+        "Plan de pago"
+      ],
+      "complementary_information": [
+        "Coordinador o coordinadora cuando corresponda",
+        "Teléfono de coordinador o coordinadora cuando sea proporcionado o autorizado",
+        "Frase institucional o promocional cuando exista"
+      ]
+    },
+    "rules": [
+      "No extraer Objetivo como campo independiente.",
+      "No extraer Presentación como campo independiente.",
+      "No extraer Perfil como campo independiente.",
+      "No extraer Requisitos como campo independiente.",
+      "No extraer Plan de Estudios.",
+      "No extraer Módulos.",
+      "No extraer información académica extensa.",
+      "No convertir Objetivo ni Presentación automáticamente en Descripción.",
+      "Si no existe una descripción breve adecuada, eliminar el bloque.",
+      "No inventar una descripción.",
+      "Si un campo permitido no existe, eliminarlo.",
+      "Los datos generales del footer no se consideran campos de contenido del programa."
+    ]
+  },
+
+  "COORDINATOR_CONTROL": {
+    "mandatory": true,
+    "purpose": "Controlar correctamente la información de coordinadores o coordinadoras.",
+    "rules": [
+      "Si el PPTX contiene únicamente el nombre de un coordinador o coordinadora, puede utilizarse en un bloque 'MÁS INFORMACIÓN' o equivalente cuando el lienzo contemple ese bloque.",
+      "Si solamente existe el nombre, solicitar al usuario el número de teléfono de esa persona antes de generar.",
+      "No utilizar automáticamente el teléfono general de Dirección de Postgrado como teléfono del coordinador.",
+      "No asumir que el teléfono institucional corresponde al coordinador.",
+      "No inventar el teléfono del coordinador.",
+      "Si el usuario proporciona el número, incorporarlo al bloque correspondiente.",
+      "Si el usuario decide no proporcionar teléfono, eliminar el bloque de información del coordinador.",
+      "El nombre del coordinador debe conservarse exactamente salvo corrección autorizada.",
+      "No duplicar el nombre del coordinador en diferentes bloques."
+    ],
+    "required_question_when_only_name_exists": "El PPTX proporciona únicamente el nombre de la coordinadora. ¿Qué número de teléfono deseas colocar junto a su nombre en 'MÁS INFORMACIÓN'?"
+  },
+
+  "FOOTER_CONTROL": {
+    "mandatory": true,
+    "purpose": "Mantener el footer institucional del flyer maestro sin depender del PPTX para construirlo.",
+    "footer_source_priority": "LIENZO / FLYER MAESTRO",
+    "rules": [
+      "Los datos institucionales generales del footer NO deben extraerse del PPTX para construir el footer.",
+      "El footer del lienzo constituye la plantilla institucional de referencia.",
+      "Conservar el footer institucional del lienzo y sus datos generales.",
+      "El PPTX únicamente debe utilizarse para CORROBORAR que los datos del footer coinciden.",
+      "La corroboración no convierte los datos del footer en contenido académico del nuevo programa.",
+      "No reemplazar automáticamente los datos del footer por los datos encontrados en el PPTX.",
+      "Si el PPTX y el footer del lienzo coinciden, continuar normalmente.",
+      "Si existe una diferencia entre el PPTX y el footer del lienzo, informar la discrepancia antes de generar.",
+      "No corregir automáticamente el footer por información del PPTX.",
+      "No mover datos del footer hacia bloques superiores.",
+      "No duplicar dirección, teléfono, Tele Fax, correo o web fuera del footer.",
+      "No utilizar el teléfono general del footer como teléfono de coordinador salvo autorización expresa del usuario."
+    ],
+    "data_to_corrobate": [
+      "Dirección",
+      "Teléfono",
+      "Tele Fax",
+      "E-mail",
+      "Sitio web"
+    ],
+    "current_reference_footer": {
+      "Dirección": "Av. Arce s/n, Facultad de Minas",
+      "Teléfono": "6227317 - 6228248",
+      "Tele Fax": "2-6122467",
+      "E-mail": "postgrado.uatf.potosi@gmail.com",
+      "Web": "www.uatfpostgrado.edu.bo"
+    },
+    "important_rule": "Estos datos pertenecen al footer institucional y no deben volver a utilizarse como información del programa extraída del PPTX."
+  },
+
+  "EXCLUDED_CONTENT": {
+    "mandatory": true,
+    "excluded_fields": [
+      "Objetivo",
+      "Presentación como sección independiente",
+      "Perfil de postulantes",
+      "Perfil del posgraduado",
+      "Criterios de admisión",
+      "Requisitos de admisión",
+      "Documentación requerida",
+      "Plan de estudios",
+      "Módulos",
+      "Asignaturas",
+      "Plataformas educativas",
+      "Moodle",
+      "Zoom",
+      "Resoluciones",
+      "Organización del curso",
+      "Cronograma administrativo",
+      "Fechas de publicación",
+      "Fechas de registro",
+      "Fechas de inscripción",
+      "Actividades administrativas",
+      "Información académica extensa",
+      "Datos generales del footer como contenido del programa"
+    ],
+    "rule": "Aunque estos datos existan en el PPTX, no deben aparecer en el flyer."
+  },
+
+  "CORRECTION_CONTROL": {
+    "mandatory": true,
+    "uppercase_accents": {
+      "automatic": true,
+      "rule": "Corregir siempre las tildes faltantes en palabras completamente escritas en MAYÚSCULAS.",
+      "examples": [
+        "EDUCACION → EDUCACIÓN",
+        "DIDACTICAS → DIDÁCTICAS",
+        "PRACTICO → PRÁCTICO",
+        "TITULACION → TITULACIÓN",
+        "INFORMACION → INFORMACIÓN",
+        "PUBLICA → PÚBLICA"
+      ]
+    },
+    "word_corrections": {
+      "automatic": false,
+      "approval_required": true,
+      "rule": "Si una corrección cambia una palabra, debe informarse antes de modificarla."
+    },
+    "protected_data": [
+      "Nombres propios",
+      "Nombres de programas",
+      "Cifras",
+      "Fechas",
+      "Precios",
+      "Nombres de personas",
+      "Denominaciones institucionales"
+    ],
+    "critical_rule": "NINGUNA CORRECCIÓN QUE CAMBIE UNA PALABRA, NOMBRE, CIFRA, FECHA, PRECIO O SIGNIFICADO PUEDE APLICARSE SILENCIOSAMENTE."
+  },
+
+  "INCONSISTENCY_CONTROL": {
+    "mandatory": true,
+    "check": [
+      "Fechas diferentes para el mismo evento",
+      "Duraciones contradictorias",
+      "Horarios contradictorios",
+      "Precios diferentes",
+      "Cargas horarias diferentes",
+      "Créditos diferentes",
+      "Nombres diferentes del mismo programa",
+      "Modalidades diferentes",
+      "Certificaciones diferentes",
+      "Información institucional contradictoria"
+    ],
+    "rules": [
+      "No elegir silenciosamente un valor sobre otro.",
+      "No modificar datos contradictorios.",
+      "Informar la inconsistencia.",
+      "Solicitar decisión del usuario cuando afecte un dato del flyer.",
+      "No utilizar información contradictoria hasta resolverla."
+    ]
+  },
+
+  "DUPLICATION_AUDIT": {
+    "mandatory": true,
+    "instruction": "Auditar todo el contenido antes de generar para garantizar que ningún dato aparezca innecesariamente más de una vez.",
+    "rules": [
+      "No repetir tipo de programa.",
+      "No repetir nombre del programa innecesariamente.",
+      "No repetir modalidad.",
+      "No repetir duración.",
+      "No repetir titulación.",
+      "No repetir horarios.",
+      "No repetir fecha de inicio.",
+      "No repetir inversión.",
+      "No repetir inscripción.",
+      "No repetir cuotas.",
+      "No repetir coordinador.",
+      "No repetir teléfono.",
+      "No repetir dirección.",
+      "No repetir correo.",
+      "No repetir web.",
+      "La información institucional completa pertenece al footer.",
+      "Eliminar duplicaciones antes que llenar espacios vacíos."
+    ]
+  },
+
+  "START_DATE": {
+    "mandatory": true,
+    "rules": [
+      "La fecha de inicio debe tratarse como una única unidad visual.",
+      "Día, mes y año deben utilizar el mismo color.",
+      "La fecha completa debe aparecer en ROJO.",
+      "No dividir la fecha entre colores.",
+      "La fecha debe provenir del PPTX actual.",
+      "Si no existe fecha válida, eliminar el bloque.",
+      "Si existen fechas contradictorias, detener la generación y reportarlas."
+    ]
+  },
+
+  "MAIN_IMAGE": {
+    "mandatory": true,
+    "instruction": "Crear o seleccionar una imagen principal relacionada exclusivamente con el programa actual.",
+    "rules": [
+      "La temática debe corresponder al programa actual.",
+      "No reutilizar automáticamente imágenes anteriores.",
+      "No introducir textos ficticios.",
+      "No introducir logotipos ficticios.",
+      "No introducir instituciones ficticias.",
+      "No introducir información académica inexistente.",
+      "Integrar la imagen profesionalmente con la composición del lienzo."
+    ]
+  },
+
+  "INFORMATION_BLOCKS": {
+    "mandatory": true,
+    "allowed_blocks": [
+      "Tipo de programa",
+      "Nombre del programa",
+      "Descripción breve",
+      "Modalidad",
+      "Duración",
+      "Titulación o certificación",
+      "Horas",
+      "Créditos",
+      "Número de plazas cuando corresponda",
+      "Horarios",
+      "Inicio",
+      "Inversión",
+      "Inscripción",
+      "Cuotas",
+      "Modalidad de pago",
+      "Coordinador o coordinadora cuando corresponda",
+      "Más información cuando corresponda",
+      "Frase promocional cuando exista",
+      "Footer institucional"
+    ],
+    "rules": [
+      "Solo crear bloques con información válida.",
+      "Si un campo no existe, eliminarlo.",
+      "No crear bloques innecesarios.",
+      "No utilizar textos de relleno.",
+      "No utilizar POR DEFINIR.",
+      "No utilizar PENDIENTE.",
+      "No utilizar NO DISPONIBLE.",
+      "No utilizar NO ESPECIFICADO.",
+      "No utilizar POR CONFIRMAR.",
+      "No utilizar A DEFINIR."
+    ]
+  },
+
+  "PPTX_ISOLATION": {
+    "mandatory": true,
+    "source_priority": "PPTX ACTUAL",
+    "rules": [
+      "Cada PPTX es un proyecto independiente.",
+      "No reutilizar fechas anteriores.",
+      "No reutilizar precios anteriores.",
+      "No reutilizar docentes o coordinadores anteriores.",
+      "No reutilizar teléfonos anteriores como datos del programa.",
+      "No reutilizar fotografías anteriores.",
+      "No utilizar información de otros proyectos.",
+      "No completar información mediante memoria.",
+      "No completar información mediante otros PPTX."
+    ]
+  },
+
+  "MISSING_INFORMATION": {
+    "mandatory": true,
+    "rule": "Si un campo permitido no existe en el PPTX, eliminarlo del diseño y redistribuir el espacio.",
+    "forbidden_text": [
+      "POR DEFINIR",
+      "PENDIENTE",
+      "NO DISPONIBLE",
+      "NO ESPECIFICADO",
+      "POR CONFIRMAR",
+      "A DEFINIR"
+    ]
+  },
+
+  "DESIGN_STYLE": {
+    "mandatory": true,
+    "style": [
+      "Institucional",
+      "Universitario",
+      "Profesional",
+      "Moderno",
+      "Elegante",
+      "Limpio",
+      "Legible",
+      "Alto impacto visual"
+    ],
+    "visual_rules": [
+      "Mantener la estructura general del lienzo.",
+      "Mantener la jerarquía visual.",
+      "Mantener márgenes adecuados.",
+      "Mantener equilibrio entre texto e imagen.",
+      "Utilizar azul institucional, rojo institucional y blanco.",
+      "No deformar escudos.",
+      "No deformar fotografías.",
+      "No superponer textos.",
+      "No cortar palabras incorrectamente.",
+      "No saturar de información.",
+      "No convertir el PPTX completo en un flyer.",
+      "Priorizar lectura rápida.",
+      "No llenar espacios con información repetida.",
+      "Respetar obligatoriamente la relación de aspecto 3:4."
+    ]
+  },
+
+  "PRE_GENERATION_REPORT": {
+    "mandatory": true,
+    "instruction": "Antes de generar la imagen, mostrar qué información será utilizada, qué correcciones existen, qué inconsistencias existen, qué escudos serán incorporados y qué autorizaciones están pendientes.",
+    "required_sections": [
+      "INFORMACIÓN EXTRAÍDA DEL PPTX QUE SERÁ UTILIZADA",
+      "TÍTULO Y NUMERACIÓN PROPUESTA",
+      "AUTORIZACIÓN DE NUMERACIÓN",
+      "DISTRIBUCIÓN DE DATOS",
+      "CORRECCIONES PROPUESTAS",
+      "INCONSISTENCIAS DETECTADAS",
+      "CONTROL DEL FOOTER",
+      "CONTROL DE COORDINADOR",
+      "INFORMACIÓN EXCLUIDA",
+      "CONTROL DE DUPLICACIONES",
+      "ESCUDOS QUE SERÁN INCORPORADOS",
+      "CONFIRMACIÓN PREVIA A GENERACIÓN"
+    ],
+    "critical_rule": "NO GENERAR HASTA RESOLVER TODAS LAS AUTORIZACIONES Y VALIDACIONES PENDIENTES."
+  },
+
+  "FINAL_VALIDATION": {
+    "mandatory": true,
+    "critical": true,
+    "checklist": [
+      "¿Se recibió el lienzo?",
+      "¿Se recibió el PPTX actual?",
+      "¿El lienzo fue utilizado como referencia visual?",
+      "¿Se identificaron los campos del lienzo?",
+      "¿Se identificaron exactamente los 3 escudos base?",
+      "¿Se confirmó si existen escudos adicionales?",
+      "¿Se informó el total exacto de escudos?",
+      "¿El tipo de programa fue detectado automáticamente?",
+      "¿El nombre oficial procede del PPTX?",
+      "¿Se verificó la existencia de numeración romana?",
+      "¿Si no existía numeración, se solicitó autorización para agregar I?",
+      "¿La numeración utilizada fue autorizada?",
+      "¿Se utilizaron únicamente campos autorizados?",
+      "¿Se excluyeron Objetivo, Presentación, Perfil, Requisitos, Documentación, Plan de Estudios y Módulos?",
+      "¿Se excluyeron Moodle, Zoom y Resoluciones?",
+      "¿El footer fue tomado del lienzo y no construido desde el PPTX?",
+      "¿El footer fue corroborado contra el PPTX?",
+      "¿Se reportó cualquier discrepancia del footer?",
+      "¿Si solo existe nombre de coordinador, se solicitó su teléfono?",
+      "¿No se utilizó el teléfono general como teléfono del coordinador sin autorización?",
+      "¿Se corrigieron automáticamente las tildes de MAYÚSCULAS?",
+      "¿Se aprobaron las correcciones de palabras?",
+      "¿Se resolvieron las inconsistencias?",
+      "¿Se realizó auditoría de duplicaciones?",
+      "¿La fecha completa está en rojo?",
+      "¿No existe información inventada?",
+      "¿No existe información POR DEFINIR o equivalente?",
+      "¿La composición respeta el lienzo?",
+      "¿El flyer tiene relación de aspecto 3:4?",
+      "¿El resultado parece un flyer terminado y profesional?"
+    ],
+    "critical_failure_rule": "Si alguna respuesta es negativa, NO GENERAR. Corregir, consultar o detener el proceso."
+  },
+
+  "ABSOLUTE_RULES": [
+    "EL LIENZO DEFINE LOS CAMPOS; EL PPTX DEFINE LOS VALORES.",
+    "EL FOOTER DEL LIENZO DEFINE LOS DATOS INSTITUCIONALES GENERALES DEL FOOTER.",
+    "EL PPTX SOLO CORROBORA LOS DATOS DEL FOOTER; NO LOS DEFINE.",
+    "SI EL FOOTER DEL LIENZO Y EL PPTX DIFIEREN, INFORMAR LA DIFERENCIA Y NO CAMBIAR SILENCIOSAMENTE EL FOOTER.",
+    "SI EL NOMBRE DEL PROGRAMA NO TIENE NUMERACIÓN ROMANA, PROPONER I PERO PREGUNTAR Y SOLICITAR AUTORIZACIÓN ANTES DE GENERAR.",
+    "SI EL USUARIO PROPORCIONA II, III, IV, XVI U OTRA NUMERACIÓN, UTILIZAR EXACTAMENTE ESA NUMERACIÓN.",
+    "NO INVENTAR NUMERACIONES.",
+    "SI EL PPTX SOLO CONTIENE EL NOMBRE DEL COORDINADOR O COORDINADORA, PUEDE PROPONERSE UN BLOQUE MÁS INFORMACIÓN, PERO DEBE SOLICITARSE EL NÚMERO TELEFÓNICO ANTES DE GENERAR.",
+    "NO UTILIZAR EL TELÉFONO GENERAL DEL FOOTER COMO TELÉFONO DEL COORDINADOR SIN AUTORIZACIÓN.",
+    "NO DUPLICAR INFORMACIÓN DEL FOOTER EN BLOQUES SUPERIORES.",
+    "NO GENERAR SIN MOSTRAR PREVIAMENTE LA INFORMACIÓN QUE SERÁ UTILIZADA.",
+    "NO GENERAR SI EXISTE UNA CORRECCIÓN DE PALABRA PENDIENTE.",
+    "NO GENERAR SI EXISTE UNA INCONSISTENCIA CRÍTICA NO RESUELTA.",
+    "NO GENERAR SIN AUDITORÍA DE DUPLICACIONES.",
+    "NO GENERAR SIN INFORMAR EL TOTAL EXACTO DE ESCUDOS.",
+    "NO GENERAR UN CUARTO ESCUDO SIN AUTORIZACIÓN.",
+    "LAS TILDES FALTANTES EN MAYÚSCULAS SIEMPRE DEBEN CORREGIRSE.",
+    "LAS CORRECCIONES QUE CAMBIEN PALABRAS DEBEN MOSTRARSE ANTES DE APLICARSE.",
+    "NO CAMBIAR NOMBRES PROPIOS, NOMBRES DE PROGRAMAS, CIFRAS, FECHAS, PRECIOS O DENOMINACIONES INSTITUCIONALES SIN AUTORIZACIÓN.",
+    "NO UTILIZAR OBJETIVOS, PRESENTACIONES, PERFILES, REQUISITOS, PLANES DE ESTUDIO O MÓDULOS SIMPLEMENTE PORQUE EXISTAN EN EL PPTX.",
+    "SI UN CAMPO NO TIENE VALOR VÁLIDO, ELIMINARLO.",
+    "NO MOSTRAR POR DEFINIR, PENDIENTE, NO DISPONIBLE, NO ESPECIFICADO, POR CONFIRMAR NI A DEFINIR.",
+    "SI EXISTE MENOS INFORMACIÓN, EL DISEÑO DEBE ADAPTARSE A ESA CANTIDAD.",
+    "NO GENERAR CONTENIDO PARA LLENAR ESPACIOS.",
+    "LA FECHA DE INICIO COMPLETA DEBE SER ROJA.",
+    "EL FORMATO FINAL DEBE SER OBLIGATORIAMENTE 3:4.",
+    "NO GENERAR HASTA SUPERAR TODAS LAS REGLAS CRÍTICAS."
+  ]
+}
 
 # MÁS INFORMACIÓN
 
